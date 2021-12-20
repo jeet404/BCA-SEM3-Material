@@ -1,0 +1,14 @@
+declare
+    e_nm emp.name%type;
+    e_sl emp.salary%type;
+    cursor c1 is select name,salary from emp;
+begin   
+    open c1;
+    fetch c1 into e_nm,e_sl;
+    dbms_output.put_line ('salary of '|| e_nm ||' is '||e_sl );
+    fetch c1 into e_nm,e_sl;
+    dbms_output.put_line ('salary of '|| e_nm ||' is '|| e_sl );
+    fetch c1 into e_nm,e_sl;
+    dbms_output.put_line ('salary of '|| e_nm ||' is '|| e_sl );
+end;
+/

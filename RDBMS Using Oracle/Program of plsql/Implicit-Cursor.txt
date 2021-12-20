@@ -1,0 +1,12 @@
+declare
+    aa emp%rowtype;
+    cursor c1 is select *from emp;
+begin
+    open c1;
+    if c1%found then
+        dbms_output.put_line ('cursor is open');
+    else
+        dbms_output.put_line ('cursor is close');
+    end if;
+end;
+/

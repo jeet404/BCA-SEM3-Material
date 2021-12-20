@@ -1,0 +1,12 @@
+declare
+    n number:=&1;
+    r number;
+begin
+  r:=mod(n,2);
+  if r=0 then
+    dbms_output.put_line('Even');
+  else
+    dbms_output.put_line('Odd');
+  end if;
+end;
+/
